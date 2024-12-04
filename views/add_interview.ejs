@@ -1,0 +1,95 @@
+<link rel="stylesheet" href="/css/interview.css" />
+<script src="/js/interview.js"></script>
+
+<section id="add-interview-details">
+  <h4 class="add-interview-heading">Add an interview</h4>
+  <form class="add-interview" action="/interview/create" method="post">
+    <label for="company">Student Name:</label>
+    <select name="studentName" id="student">
+      <% for(student of allStudent){ %>
+      <option
+        value="<%= student._id %>,<%= student.batch %>,<%= student.name %>"
+      >
+        <%= student.name %>
+      </option>
+      <% } %>
+    </select>
+
+    <label for="company">Company Name:</label>
+    <select name="companyName" id="company">
+      <% for(company of allCompany){ %>
+      <option
+        value="<%= company._id %>,<%= company.name %>,<%= company.date %>"
+      >
+        <%= company.name %>
+      </option>
+      <% } %>
+    </select>
+    <input type="submit" value="Add Interview" />
+  </form>
+</section>
+<section>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Student ID</th>
+      <th scope="col">Batch</th>
+      <th scope="col">Name</th>
+      <th scope="col">Company</th>
+      <th scope="col">Date</th>
+      <th scope="col">Status</th>
+      <th scope="col">Update</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% let count=1; %> <% for(student of allInterview) { %>
+    <tr>
+      <th scope="row"><%= count++ %></th>
+      <td><%= student.studentBatch %></td>
+      <td><%= student.studentName %></td>
+      <td><%= student.companyName %></td>
+      <td><%= student.interviewDate %></td>
+      <td><%= student.status %></td>
+
+      <td><a href="#" onclick="toggleDiv('<%= student._id %>')">Update</a></td>
+      <td><a href="/interview/destroy/<%= student._id %>">Delete</a></td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
+</section>
+
+
+<% for(student of allInterview){ %>
+  <div id="<%= student._id %>" class="update-card hidden">
+    <h3>Update Interview Status</h3>
+    <div class="update-interview-date">
+      <form class="interview-form" action="/interview/update/<%= student._id %>" method="post">
+        <div class="info-data">
+          <label for="student-name">Name:</label>
+          <p name="studentName" id="student-name"><%= student.studentName %></p>
+        </div>
+        <div class="info-data">
+          <label for="company-name">Company:</label>
+          <p name="companyName" id="company-name"><%= student.companyName %></p>
+        </div>
+        <div class="info-data">
+          <label for="interview-date">Interview Date:</label>
+          <p name="interviewDate" id="interview-date"><%= student.interviewDate %></p>
+        </div>
+        <div class="info-data">
+          <label for="interview-status">Interview Status:</label>
+          <select class="interview-status-update" name="status" id="interview-status">
+            <option value="To Be Decided">To Be Decided</option>
+            <option value="PASS">PASS</option>
+            <option value="FAIL">FAIL</option>
+            <option value="On Hold">On Hold</option>
+            <option value="Didn't Attempt">Didn't Attempt</option>
+          </select>
+        </div>
+        <input class="interview-submit-btn" type="submit" value="Update Details" />
+      </form>
+    </div>
+  </div>
+<% } %>

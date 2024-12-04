@@ -1,0 +1,48 @@
+<% if(locals.user){ %>
+
+  <header>
+  <div class="header-div">
+    <p id="header-heading">Placement Cell</p>
+    <ul class="pages-links">
+      <li>
+        <a href="/">Dashboard</a>
+      </li>
+      <li>
+        <a href="/student/add-student">Students</a>
+      </li>
+      <li>
+        <a href="/interview/add-interview">Interview</a>
+      </li>
+      <li>
+        <a href="/company/add-company">Company</a>
+      </li>
+      <li>
+        <a href="/interview/exportUser">Download Report
+          <small>.csv</small>
+        </a>
+      </li>
+    </ul>
+    <ul class="sign-data">
+      <% if(locals.user){ %>
+      <li>
+        <a href="/users/profile"> <%= user.name %> </a>
+      </li>
+      <li>
+        <a href="/users/sign-out">Sign Out</a>
+      </li>
+
+      <% }else{ %>
+      <li>
+        <a href="/users/sign-in">Sign In</a>
+      </li>
+      <li>
+        <a href="/users/sign-up">Sign Up</a>
+      </li>
+
+      <% } %>
+    </ul>
+  </div>
+</header>
+
+<% } %>
+

@@ -1,0 +1,18 @@
+footer {
+  background-color: #343a40;
+  color: #fff;
+  padding: 10px 0;
+  margin-top: auto;
+  /* Push the footer to the bottom */ }
+
+.footer-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.redirect-links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px; }
+  .redirect-links a:hover {
+    text-decoration: underline; }

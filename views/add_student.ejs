@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/css/student.css">
+<section id="add_student_details">
+  <h4 class="add-student-heading">Add Student</h4>
+
+  <form class="add-student" action="/student/create" method="post">
+    <input type="email" name="email" placeholder="Enter Email" required />
+    <input type="text" name="batch" placeholder="Enter Batch" required />
+    <input type="text" name="name" placeholder="Enter Name" required />
+    <input type="text" name="college" placeholder="Enter College" required />
+    <select name="status" id="status">
+      <option selected>Not Placed</option>
+      <option>Placed</option>
+    </select>
+    <input type="number" name="dsa_score" placeholder="Enter Dsa  Score" required />
+    <input type="number" name="webdev_score" placeholder="Enter WebDev Score" required />
+    <input type="number" name="react_score" placeholder="Enter React Score" required />
+    <input type="submit" value="Add Student">
+  </form>
+</section>
+
+
+
+

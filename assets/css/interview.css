@@ -1,0 +1,113 @@
+.hidden {
+  display: none; }
+
+.visible {
+  display: block; }
+
+section .table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px; }
+  section .table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    background-color: #f2f2f2; }
+  section .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left; }
+  section .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; }
+  section .table a {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer; }
+  section .table a:hover {
+    text-decoration: underline; }
+
+#add-interview-details {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 400px;
+  margin: 20px auto; }
+  #add-interview-details .add-interview-heading {
+    color: #007bff;
+    font-size: 1.5em;
+    margin-bottom: 20px; }
+  #add-interview-details .add-interview {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px; }
+    #add-interview-details .add-interview label {
+      margin-bottom: 8px;
+      font-weight: bold; }
+    #add-interview-details .add-interview select,
+    #add-interview-details .add-interview input {
+      padding: 8px;
+      margin-bottom: 16px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      box-sizing: border-box;
+      width: 100%; }
+    #add-interview-details .add-interview input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer; }
+      #add-interview-details .add-interview input[type="submit"]:hover {
+        background-color: #0056b3; }
+
+.update-card {
+  background-color: #fff;
+  /* Set your desired background color here */
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: 20px auto; }
+  .update-card h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px; }
+  .update-card .update-interview-date {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px; }
+    .update-card .update-interview-date .info-data {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 15px; }
+      .update-card .update-interview-date .info-data label {
+        font-weight: bold;
+        margin-bottom: 5px; }
+      .update-card .update-interview-date .info-data p {
+        padding: 10px;
+        background-color: #f5f5f5;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin: 0; }
+      .update-card .update-interview-date .info-data select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        background-color: #fff;
+        color: #333;
+        margin-top: 5px; }
+    .update-card .update-interview-date .interview-submit-btn {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out; }
+      .update-card .update-interview-date .interview-submit-btn:hover {
+        background-color: #0056b3; }
+
+.blurred-background {
+  backdrop-filter: blur(8px);
+  /* Adjust the blur amount as needed */ }

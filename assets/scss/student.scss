@@ -1,0 +1,43 @@
+// Add these styles in your SCSS file
+
+#add_student_details {
+  background-color: #f8f9fa; /* Set your desired background color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+
+  .add-student-heading {
+    color: #007bff;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+
+  .add-student {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+
+    input,
+    select {
+      padding: 10px;
+      margin-bottom: 16px;
+      border: 1px solid #ced4da;
+      border-radius: 4px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}
