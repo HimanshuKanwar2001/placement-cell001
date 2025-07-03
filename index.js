@@ -1,7 +1,6 @@
 const express = require("express");
 const cookieParser = require("cookie-parser");
 const app = express();
-const port = process.env.PORT || 8000;
 const expressLayouts = require("express-ejs-layouts");
 const path = require("path");
 const db = require("./config/mongoose"); // Ensure this exports the Mongoose connection or URL
@@ -12,6 +11,7 @@ const MongoStore = require("connect-mongo");
 // const sassMiddleware = require("node-sass-middleware");
 const CsvParser = require("json2csv");
 require("dotenv").config();
+const port = process.env.PORT || 8000;
 
 // app.use(
 //   sassMiddleware({
@@ -46,7 +46,7 @@ app.use(
       maxAge: 1000 * 60 * 100,
     },
     store: MongoStore.create({
-      mongoUrl: "mongodb://localhost:27017/yourDatabaseName",
+      mongoUrl: process.env.MONGO_URI,
       autoRemove: "disabled",
     }),
   })
