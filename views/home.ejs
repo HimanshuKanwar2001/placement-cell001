@@ -8,39 +8,42 @@
   <div class="student-data-card">
     <div class="student-basic-info">
       <div class="info-data">
-        <label for="student-name">Name:</label>
-        <p id="student-name"><%= student.name %></p>
+        
+      <label for="student-name">Name:</label>
+      <p id="student-name"><%= student.name %></p>
       </div>
       <div class="info-data">
-        <label for="student-name">Email:</label>
-        <p id="student-email"><%= student.email %></p>
+        
+      <label for="student-name">Email:</label>
+      <p id="student-email"><%= student.email %></p>
       </div>
       <div class="info-data">
         <label for="student-batch">Batch:</label>
-        <p id="student-batch"><%= student.batch %></p>
+      <p id="student-batch"><%= student.batch %></p>
       </div>
       <div class="info-data">
         <label for="student-college">College:</label>
-        <p id="student-college"><%= student.college %></p>
+      <p id="student-college"><%= student.college %></p>
       </div>
       <div class="info-data">
         <label for="student-status">Status:</label>
-        <p id="student-status"><%= student.status %></p>
+      <p id="student-status"><%= student.status %></p>
       </div>
       <div class="info-data">
         <label for="student-dsa-score">DSA Score:</label>
-        <p id="student-dsa-score"><%= student.dsa_score %></p>
+      <p id="student-dsa-score"><%= student.dsa_score %></p>
       </div>
       <div class="info-data">
         <label for="student-webdev-score">WebDev Score:</label>
-        <p id="student-webdev-score"><%= student.webdev_score %></p>
+      <p id="student-webdev-score"><%= student.webdev_score %></p>
       </div>
       <div class="info-data">
         <label for="student-react-score">React Score:</label>
-        <p id="student-react-score"><%= student.react_score %></p>
+      <p id="student-react-score"><%= student.react_score %></p>
       </div>
     </div>
     <div class="interview-details">
+      
       <div class="Interview-data">
         <table class="table">
           <thead>
@@ -63,6 +66,7 @@
       </div>
     </div>
     <a href="/student/destroy/<%= student._id %>">Delete</a>
+    
   </div>
   <% } %>
 </div>
